@@ -1,0 +1,53 @@
+<html lang="en">
+    <script src='parse_js.js'>
+    </script>
+<head>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1a3c0876-1d48-4251-9988-6074bef1b682&lang=ru_RU"
+        type="text/javascript">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+
+        </script>
+</head>
+
+<body>
+    <div id="json"></div>
+    <script>
+            var href = window.location.href;
+            var url_fjson = href.substring(0, href.lastIndexOf('/')) + "/atom.json";
+            url_fjson = url_fjson.replace('file','http');
+            var scene=[];
+            console.log(url_fjson)
+            $.getJSON(url_fjson, function(data) { 
+                var items = [];
+                $.each( data, function( key, val ) {
+                    items.push( "<li id='" + key + "'>" + val + "</li>" );
+            console.log(items[0])
+            });
+            });
+    </script>
+
+    <!-- Yandex API START ----------------------------------------------->
+    <div id="map" style="width: 100%; height: 100%"></div>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                center: [54.91, 27.362],
+                zoom: 10
+            });
+            var obj = new ymaps.GeoObject({
+                geometry: {
+                    type: "Point",
+                    coordinates: [54.99, 27.352]
+                }
+            });
+            myMap.geoObjects.add(obj);
+
+            $(document).ready(function(){
+                alert('Библиотека подключена и работает!');
+            });
+        }
+    </script>
+</body>

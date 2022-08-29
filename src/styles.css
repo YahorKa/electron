@@ -1,0 +1,129 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+/* Sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f6f6f6;
+    overflow-x: hidden;/* Disable horizontal scrolling */
+}
+
+/* Map content style */
+.map {
+    margin-left: 160px;/* Same as sidebar width */
+    display: block;
+    align-items: center;
+}
+
+.files {
+    position: relative;
+    margin-bottom: 2em;
+    background-color: #fff;
+    width: 100%;
+    max-width: 970px;
+    border-radius: 0.75em;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 5px 16px -2px rgba(42, 115, 217, 0.2);
+    font-size: 1em;
+    padding: 0.6em 0;
+    user-select: none;
+    }
+
+    .files__buttons {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1em;}
+
+    .files__input-files {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;}
+
+.button {
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #2a73d9;
+    border: 2px solid #2a73d9;
+    color: #fff;
+    text-align: center;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: 4px;
+    height: 2.5em;
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0 .9em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    min-width: 5em;
+    transition: color 0.2s ease-out, background-color 0.2s ease-out, opacity 0.2s ease-out;
+    }
+
+    .button__icon {
+        fill: currentColor;
+        margin-right: .75em;
+        margin-left: -0.1em;
+    }
+
+    .button__text {
+        margin: 0 auto;
+    }
+
+    .button:hover {
+        background-color: #fff;
+        color: #2a73d9;
+    }
+
+.input {
+    padding-bottom: 1em;
+}
+
+input[type="number"] {
+	width:80%;
+} 
+
+/* general typography */
+.leaflet-container {
+	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.description {
+    display: block;
+    color: #999;
+    font-size: 10px;
+    line-height: 17px;
+}
+.progress-bar{
+    width:100%;
+    height: 100px;
+    position: absolute;
+    align-items: center;
+    top: 10%;
+    left: 300px;
+    z-index:0;
+}
+
+progress{
+    width:80%;
+    height: 40px;
+}
+label{
+    color: #2a73d9;
+}
